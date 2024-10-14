@@ -2,7 +2,7 @@
 
 import { useFetch } from "@/hooks/use-fetcher"
 import { cn } from "@/lib/utils"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import Company from "./Company"
 import { data as FormData } from "@/hooks/use-data"
 export const Button = ({ children, handleClick, className }) => {
@@ -23,7 +23,7 @@ const Companies = () => {
         })
     }
   return (
-    <div className="mb-4">
+    <div className="mb-7">
         <header className="flex items-center">
             <Button className={'bg-blue-600 text-white'} active={active === 'all'} handleClick={()=>handleClick('all')}> All </Button>
             <Button className={'text-[#636AE8FF] bg-[#F2F2FDFF] hover:text-[#636AE8FF] hover:bg-[#F2F2FDFF]'} active={active === 'pending'} handleClick={()=>handleClick('pending')}> Pending </Button>
